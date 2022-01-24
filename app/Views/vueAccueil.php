@@ -3,72 +3,35 @@
 <head> 
 <meta charset="utf-8" />
 <link rel="stylesheet" href="<?php echo base_url('/public/css/style.css'); ?>" /> 
+<link rel="icon" type="image/png" href="images/logoNoirHd.png"/>
+<title>La Moisson des Pains </title>
 </head> 
+
 <body>
-<?php $titre = 'Mon Blog'; ?>
+	<header>
 
-<?php 
-echo base_url('/public/css/style.css');
-//==========================================================================
-// récupération du jeu de données $data, attention on n'accede pas a $data, 
-// mais à la variable $resultat définie dans le Controleur via $data['resultat']=$donnees;
-// ensuite, on boucle sur les différents tuples résultats via le foreach 
-// puis on accède à une donnée en particulier avec la syntaxe : $liste->BIL_TITRE
-// BIL_TITRE étant l'attribut défini dans la BDD
-//==========================================================================
+		<?php include('header.php'); ?>
+	</header>
+	
+	<div class="bienvenueligne">
+			<h1>
+				La Moisson des Pains vous souhaite la bienvenue sur son site</h1>
+	</div>
 
-//liste contenu Blog
-echo 'Resume contenu Blog :'; 
-echo '<table border=1>';
+	<div class="slider">
+		<figure>
+			<img src="images/1.jpg">
+			<img src="images/2.jpg">
+			<img src="images/3.jpg">
+			<img src="images/4.jpg">
+			<img src="images/1.jpg">
+		</figure>
+		
+	</div>
 
-//==========================================================================
-// on boucle pour chaque ligne de résultat de la requete sql
-// on stocke chaque ligne dans une variable $liste
-//==========================================================================
-foreach ($resultat as $liste): 
+	<footer>
+		<?php include('footer.php'); ?>
+	</footer>
 
-//==========================================================================
-// on on affiche le titre et date des billets présents en BDD
-// via $liste qui ne contien qu'une ligne de résultat
-//==========================================================================
-
-	echo '<tr>';
-	echo '<td>';
-			echo $liste->BIL_TITRE;
-	echo '</td>';
-	echo '<td>';
-			echo $liste->BIL_DATE;
-	echo '</td>';
-	echo '</tr>';
-
-endforeach; 
-echo '<table>';
-echo '</BR>';
-
-
-
-echo 'Selection du billet de Blog :  ';
- 
-echo '<Form action=index.php method=post>';
-echo '<Select name=billet>';
-
-//==========================================================================
-// on boucle pour chaque ligne de résultat de la requete sql
-// on stocke chaque ligne dans une variable $liste
-//==========================================================================
-foreach ($resultat as $liste): 
- 
-//==========================================================================
-// on on affiche l'id, le titre et la date des billets présents en BDD dans un champ select
-// via $liste qui ne contien qu'une ligne de résultat
-//==========================================================================
-	echo '<option value='.$liste->BIL_ID.'>'.$liste->BIL_TITRE." : ".$liste->BIL_DATE.'</option>';
-endforeach;
-
-echo '</Select>'; 
-echo '<input type=submit value=Afficher>';
-echo '</Form>';
- 
-?>
 </body>
 </html>

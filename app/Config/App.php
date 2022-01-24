@@ -21,7 +21,7 @@ class App extends BaseConfig
 	| environments.
 	|
 	*/
-	public $baseURL = 'http://localhost/CodeIgniter-4.0.4';
+	public $baseURL = 'http://localhost/lamoissondespains';
 
 	/*
 	|--------------------------------------------------------------------------

@@ -1,5 +1,268 @@
-body
-{
-font-weight: bold;
-background-image : url("../images/gsb.png");
+/*Polices*/
+
+@font-face{
+    font-family: "RalewayB";
+    src:url("fonts/Raleway-Black.ttf") format('truetype');
+
+
 }
+
+@font-face {
+ 
+    font-family: "RalewaySB";
+    src: url("fonts/Raleway-SemiBold.ttf") format('truetype');
+    
+}
+
+@font-face {
+
+    font-family: "RalewayL";
+    src: url("fonts/Raleway-Light.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: "JosefinSlab";
+    src: url("fonts/JosefinSlab-Regular.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: "JosefinSlabBold";
+    src: url("fonts/JosefinSlab-Bold.ttf") format('truetype');
+}
+
+/* ------------------------------------*/
+
+body {
+    background: #e7ceb2;
+    width: 100%;
+    
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+/*linear-gradient(to right, white, #e7ceb2 50%, #e7ceb2);*/
+header {
+    top: 0;
+    left: 0;
+    position: relative;
+    width: 100%;
+    display: flex;
+    background: #e7ceb2;
+    height: 150px;
+    margin: 0px;
+    padding: 0px;
+       
+}
+
+    header .container {
+        height: 100%;
+        width: 1500px;
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+        flex-direction: row;
+        justify-content: space-between;
+        
+    }
+
+header .container input{
+    height: 200px;
+    width:auto;
+}
+
+
+header .container ul{
+    display:flex;
+    justify-content: space-evenly;
+    list-style:none;
+    
+}
+    header .container ul button {
+        font-family: "RalewaySB";
+        font-size: 1.5em;
+        border: 2px solid cornflowerblue;
+        border-radius: 3rem;
+        border-color: transparent;
+        background-color: transparent;
+        margin: 0 20px;
+        padding: 0.5rem 2rem;
+        text-decoration: none;
+        color: black;
+    }
+
+        header .container ul button:hover {
+            background-color: white;
+            color: #8B756A;
+            transition-duration: 0.3s;
+        }
+
+/* Page Accueil*/
+.slider {
+    overflow: hidden;
+    margin-left: 10px;
+    margin-right: 10px;
+    flex: 1 0 auto;
+    /*grow (prend toute la place possible - shrink (ne pas être plus réduit que sa taille min) - basis (largeur)S*/
+    
+}
+.slider figure{
+    position:relative;
+    width:500%;
+    height:auto;
+    margin:0;
+    top:0;
+    left:0;
+    animation: 20s slider infinite;
+}
+
+.slider figure img{
+    width:20%;
+    float:left;
+    filter:opacity(75%);
+    
+}
+
+
+
+.bienvenueligne {
+    position: relative;
+    text-align: center;
+    top: 150px;
+    z-index: 10;
+    font-family: RalewaySB;
+    color: white;
+    height: 0;
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-top: 0;
+}
+
+    .bienvenueligne h1 {
+        border-top: 2px solid white;
+        border-bottom: 2px solid white;
+        padding-bottom: 20px;
+        padding-top:20px;
+        text-shadow: 0.1em 0.1em 0.1em #333 ;
+        
+    }
+
+ 
+
+@keyframes slider {
+    0%{
+        left:0;
+    }
+    20%{
+        left:0;
+    }
+    25%{
+        left:-100%;
+    }
+    45%{
+        left:-100%;
+    }
+    50%{
+        left: -200%;
+    }
+    70%{
+        left:-200%;
+    }
+    75%{
+        left:-300%;
+    }
+    95%{
+        left:-300%;
+    }
+    100%{
+        left:-400%;
+    }
+
+}
+
+/* Page Produits*/
+
+.categories{
+    display:flex;
+    flex-direction:row;
+    width:100%;
+    margin:0;
+    height:100px;
+
+}
+
+.categories .choix{
+    border: 2px solid cornflowerblue;
+    width:200px;
+    height:auto;
+    margin:5px;
+}
+
+
+/*FOOTER*/
+footer {
+    /*n'est pas réduit si on diminue la page en hauteur*/
+    flex-shrink: 0;
+    background-color:black;
+    width: 100%;
+    border-top: 1px solid black;
+}
+
+    footer .main {
+        width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        font-family: RalewaySB;
+        color: #e7ceb2;
+        /* haut- g/d - bas*/
+        padding: 50px 0 100px;
+        font-size: 16px;
+    }
+
+footer .bloc {
+    flex-basis:30%;
+    margin: 0 30px;
+    
+}
+
+
+
+    footer h3 {
+        font-size: 22px;
+        padding-bottom:20px;
+    }
+
+footer ul{
+    list-style-type:none;
+   
+    padding:2px 0;
+}
+    
+
+/* Mobile*/
+@media(max-width:900px){
+
+    header{
+        position: relative;
+        background-color: #e7ceb2;
+        height:auto;
+    }
+
+    header .container  {
+            display: flex;
+            flex-direction:column;
+            justify-content: space-evenly;
+            width:100%;
+    }
+
+    
+
+    header .container ul a{
+        display:flex;
+        flex-direction:column;
+    }
+}
+
