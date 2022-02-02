@@ -3,9 +3,9 @@
 	<h3>La Moisson des pains</h3>
 	<ul>
 			<li>Intermarch&eacute Super</li>
-			<li>Lorient, Lanveur</li>
 			<li>8 rue Alfred Dreyfus</li>
 			<li>56100 Lorient</li>
+			<li>Zone de lanveur </li>
 			
 	</ul>
 	
@@ -29,12 +29,8 @@
 	<div class="bloc liens">
 	<h3>Liens</h3>
 	<ul>
-		<li>
-			<form>
-				<input type="submit" name="foothistoire">test</input>
-			</form>
-
-		</li>	
+			<li><a>Contact</a></li>
+			<li>Tel: 02 97 37 45 68</li>
 			
 	</ul>
 		

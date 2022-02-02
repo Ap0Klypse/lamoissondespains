@@ -93,8 +93,8 @@ header .container ul{
     }
 
         header .container ul button:hover {
-            background-color: white;
-            color: #8B756A;
+            background-color: black;
+            color: #e7ceb2;
             transition-duration: 0.3s;
         }
 
@@ -235,9 +235,12 @@ footer .bloc {
         padding-bottom:20px;
     }
 
-footer ul{
-    list-style-type:none;
-   
+    footer ul {
+        list-style-type: none;
+        padding: 2px 0;
+    }
+
+footer li{
     padding:2px 0;
 }
     
